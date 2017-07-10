@@ -1,16 +1,20 @@
 #!/usr/bin/env ruby
 require 'minitest/autorun'
-require_relative 'gigasecond'
+require_relative './gigasecond.rb'
 
 # Common test data version: 1.0.0 61e7d70
 class GigasecondTest < Minitest::Test
+  def setup
+    
+  end
+  
   def test_date_only_specification_of_time
     # skip
     assert_equal Time.utc(2043, 1, 1, 1, 46, 40), Gigasecond.from(Time.utc(2011, 4, 25, 0, 0, 0))
   end
 
   def test_second_test_for_date_only_specification_of_time
-    skip
+    # skip
     assert_equal Time.utc(2009, 2, 19, 1, 46, 40), Gigasecond.from(Time.utc(1977, 6, 13, 0, 0, 0))
   end
 
